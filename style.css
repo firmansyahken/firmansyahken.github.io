@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 99;
+}
+
+.navbar .nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .link {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.navbar .link a {
+    font-size: 15px;
+    color: #000;
+}
+
+.navbar .brand h2 {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.navbar_mobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    z-index: 99;
+    background-color: white;
+}
+
+.navbar_mobile h2 {
+    font-size: 24px;
+}
+
+.navbar_mobile i {
+    font-size: 25px;
+} */
+
+.hero {
+    width: 100%;
+    min-height: 90vh;
+}
+
+.hero .hero_main {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.hero .hero_main svg {
+    width: 100%;
+    max-width: 500px;
+    animation: faded2 3000ms ease-in;
+    transition: .5s ease-out;
+}
+
+.info {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.info p {
+    font-size: 18px;
+    color: #333;
+}
+
+@keyframes faded {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes faded2 {
+    from{opacity: 0; transform: scale(1.5); transform-origin: center;}
+    to{opacity: 1; transform: scale(1); transform-origin: center;}
+}
+
+
+.hero .hero_main h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -2;
+    line-height: 100px;
+    animation: faded 3000ms;
+    color: #a7a7a7;
+}
+
+@keyframes waves {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes waves {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}
+
+#hair {
+    animation: waves 3000ms infinite;
+}
+
+@keyframes swipeDown {
+    from{
+        top: -100%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes swipeUp {
+    from{
+        top: 100%;
+        opacity: 0.5;
+    }
+}
+
+.floating_1 {
+    position: absolute;
+    background-color: #BB85FF;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    top: 50%;
+    left: -100%;
+    filter: drop-shadow(0px 4px 13px #BB85FF);
+    animation: swipeDown 4000ms forwards, floatL 4000ms infinite;
+    transition: ease-out .3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.floating_1:hover {
+    background-color: #af6efe;
+    border: 2px solid black;
+}
+
+.floating_2 {
+    position: absolute;
+    background-color: #72CCFF;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    top: 80%;
+    right: -80%;
+    box-shadow: 0px 0px 20px #72CCFF;
+    animation: swipeUp 5000ms forwards, floatL 3000ms infinite;
+    transition: ease-out .3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.floating_2:hover {
+    background-color: #62c5fe;
+    border: 2px solid black;
+}
+
+
+.floating_3 {
+    position: absolute;
+    background-color: #FF6287;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    top: 30%;
+    right: -100%;
+    filter: drop-shadow(0px 3px 20px #FF6287);
+    animation: swipeDown 2000ms forwards, floatR 4000ms infinite;
+    transition: ease-out .3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.floating_3:hover {
+    background-color: #ff5179;
+    border: 2px solid black;
+}
+
+@keyframes floatL {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+}
+
+@keyframes floatR {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-20px);}
+    100%{transform: translateX(0);}
+}
+
+.particle {
+	position: absolute;
+ 	border-radius: 50%;
+    z-index: 99;
+}
+
+.modal {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    animation: faded 500ms ease-in;
+    transition: all .3s ease-out;
+}
+
+.modal .modal_content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    max-width: 500px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.modal .modal_content {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    /* .navbar {
+        display: none;
+    }
+
+    .navbar_mobile {
+        display: flex;
+    } */
+
+    .hero .hero_main h1 {
+        font-size: 70px;
+        line-height: 60px;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+
+    .floating_1 {
+        font-size: 18px;
+        top: 80%;
+        left: -30%;
+    }
+
+    .floating_2 {
+        font-size: 18px;
+        top: 50%;
+        right: -30%;
+    }
+    
+    .floating_3 {
+        font-size: 18px;
+        top: 0%;
+        right: 80%;
+    }
+
+    .modal .modal_content {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info p {
+        font-size: 13px;
+    }
+
+    .hero .hero_main h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .floating_1 {
+        font-size: 18px;
+        top: 80%;
+        left: -30%;
+    }
+
+    .floating_2 {
+        font-size: 18px;
+        top: 50%;
+        right: -30%;
+    }
+    
+    .floating_3 {
+        font-size: 18px;
+        top: 0%;
+        right: 50%;
+    }
+
+    .modal .modal_content {
+        font-size: 13px;
+    }
+}
